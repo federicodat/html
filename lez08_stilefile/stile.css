@@ -1,0 +1,18 @@
+    /*css */
+        
+    th{
+        color: blue;            
+    }
+    .evidenziato
+    {
+        background-color : greenyellow    !important      ;
+    }
+    .selezionato
+    {
+        background-color :rgb(128, 0, 23)     !important      ;
+        color: white ;
+        font-weight :bold;
+    }
+    #gio-nome {
+        color: red;            
+    }

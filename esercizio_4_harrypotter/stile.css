@@ -1,0 +1,29 @@
+
+/* body {
+    margin-top: 50px;
+}
+
+.sfondo{
+    background-image: url(hogwarts.png) !important;
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: 2000 ;
+     
+} */
+
+img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-height: 700px;
+}
+ 
+logo {
+    
+    display: block;
+    margin: auto;
+    width: 80%;
+   
+    
+}
+ 

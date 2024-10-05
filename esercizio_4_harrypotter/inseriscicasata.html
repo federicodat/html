@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="background-color:rgba(0, 255, 221, 0.099)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="casata.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"></li>
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listacasate.html">Lista Casate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inserisci Casata</a>
+            </li>
+            <li class="nav-item"></li>
+              <a class="nav-link" href="listabacchette.html">Lista Bacchette</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inseriscibacchetta.html">Inserisci Bacchetta</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Inserisci Casata</h1>
+
+                <div class="form-group">
+                    <label for="input-nome">Nome</label>
+                    <input type="text" class="form-control" id="input-nome" placeholder="inserisci nome della casata"/>
+                </div>
+                <div class="form-group">
+                    <label for="input-des">Descrizione</label>
+                    <input type="text" class="form-control" id="input-des" placeholder="inserisci una breve descrizione"/>
+                </div>
+                <div class="form-group">
+                  <label for="input-logo">Logo</label>
+                  <input type="url" class="form-control" id="input-logo" placeholder="inserisci url foto del logo"/>
+              </div>
+                <div class="form-group">
+                    <label for="input-bacchette">Numero Bacchette</label>
+                    <input type=number  min="0"   class="form-control" id="input-bacchette" placeholder="inserisci numero bacchette possedute"/>
+                </div>
+                <button type="button" class="btn btn-success" onclick="aggiungicasata()">Salva</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="scriptCasata.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+larghezza-30{
+    width: 30%;
+}
+
+.testo-centrato{
+    text-align: center;
+}
+td {
+    border: 1px solid;
+}
+.struttura100{
+    width: 100%;
+}
+
+.centrato-orizzontalmente{
+    margin: auto;
+}
+.padding-interno{
+    padding: 15px;
+}

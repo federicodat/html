@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Creare un piccolo sistema di controllo temperatura, se la temperatura è maggiore di 37.5 non permettere
+         l'ingresso nel ristorante, altrimenti si! Attenzione ai valori limite! 
+    -->
+    <div class="container">
+
+        <h1>controllo temperatura</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="input-temp">Temperatura</label>
+                    <input type="text" class="form-control" id="input-temp"/>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-block" onclick="salva()">Salva</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+       
+        
+
+        <script>
+            function salva(){
+                var Temperatura = document.getElementById("input-temp").value;
+        
+                if (isNaN(Temperatura)) {
+                    alert("non è un numero ")
+                     ;
+                 } 
+                 else {
+                       if ((Temperatura) < 35 ||Temperatura > 42 ) {
+                        alert("temperatura non ammessa ")
+                        } 
+                    } ;
+                         
+                 if (Temperatura > 37.5)  {
+                    alert("vietato ingresso ")                      
+                    } 
+                    else
+                    {
+                    alert("accettato ingresso ")                      
+                    } 
+                    ;
+
+                document.getElementById("input-temp").value = "";
+             
+            }
+        </script>
+</body>
+</html>
