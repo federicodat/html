@@ -6,7 +6,7 @@ function aggiungicasata(){
     let varNome = $("#input-nome").val();       
     let varDesc = $("#input-des").val();  
     let varLogo = $("#input-logo").val();  
-    let varBacc = $("#input-bacchette").val();  
+    let varBacc = 0 ; // $("#input-bacchette").val();  
                            //JQUERY
                            if (varNome ==null || varNome.trim() === "")  
                             { window.alert("inserire nome") ; return   }  
