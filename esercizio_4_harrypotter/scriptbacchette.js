@@ -47,6 +47,11 @@ if (varFoto ==null || varFoto.trim() === "")
     bacchettaLocale.push(bacchetta);
     localStorage.setItem("bacchette", JSON.stringify(bacchettaLocale)) ;
 
+
+//    ------------ aggiorna casata -----------------
+debugger;       
+addcasata(varCasata);
+//    ------------ aggiorna casata -----------------
     debugger;
     document.getElementById("input-codice").value = "";
     document.getElementById("input-materiale").value = "";
@@ -180,6 +185,8 @@ function eliminab(indice){
                             ? JSON.parse(localStorage.getItem("bacchette")) : [];
 
     bacchettaLocale.splice(indice, 1);
+
+    subcasata(indice);
 
     localStorage.setItem("bacchette", JSON.stringify(bacchettaLocale));
     stampabacchetta();

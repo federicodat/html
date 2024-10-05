@@ -14,8 +14,8 @@ function aggiungicasata(){
                              { window.alert("inserire descrizione") ; return   }  
                             if (varLogo ==null || varLogo.trim() === "")  
                             { window.alert("inserire url logo") ; return   }  
-                            if (varBacc ==null || varBacc.trim() === "")  
-                            { window.alert("inserire numero bacchette") ; return   }  
+                            // if (varBacc ==null || varBacc.trim() === "")  
+                            // { window.alert("inserire numero bacchette") ; return   }  
                
     let casata = {
         nome: varNome,
@@ -68,8 +68,8 @@ function salvac(){
          { window.alert("inserire descrizione") ; return   }  
         if (varLogo ==null || varLogo.trim() === "")  
         { window.alert("inserire url logo") ; return   }  
-        if (varBacc ==null || varBacc.trim() === "")  
-        { window.alert("inserire numero bacchette") ; return   }  
+        // if (varBacc ==null || varBacc.trim() === "")  
+        // { window.alert("inserire numero bacchette") ; return   }  
 
         
     let casataLocale = localStorage.getItem("casata") != null 
@@ -125,6 +125,63 @@ function eliminac(indice){
     localStorage.setItem("casata", JSON.stringify(casataLocale));
     stampacasata();
 }
+
+
+function addcasata(varCasata){
+    debugger
+    let casataLocale = localStorage.getItem("casata") != null 
+    ? JSON.parse(localStorage.getItem("casata")) : [];
+
+for(let [idx, item] of casataLocale.entries()){
+if(item.nome == varCasata){
+// item.nome = varNome;
+// item.descriz = varDesc;
+// item.logo = varLogo;
+item.bacc =(item.bacc * 1) +1;
+
+}
+}
+
+localStorage.setItem("casata", JSON.stringify(casataLocale));
+//stampacasata();
+
+}
+ 
+
+function subcasata(indice){
+    debugger
+ let vcasata="";
+    // trova la bacchetta
+    let bacchettaLocale = localStorage.getItem("bacchette") != null 
+    ? JSON.parse(localStorage.getItem("bacchette")) : [];
+
+for(let [idx, item] of bacchettaLocale.entries())
+    {
+if(idx == indice){
+    vcasata=item.casata  ;
+     
+}}
+//-------------------------
+
+let casataLocale = localStorage.getItem("casata") != null 
+? JSON.parse(localStorage.getItem("casata")) : [];
+
+for(let [idx, item] of casataLocale.entries()){
+if(item.nome == vcasata){
+// item.nome = varNome;
+// item.descriz = varDesc;
+// item.logo = varLogo;
+item.bacc =(item.bacc * 1) -1;
+
+}
+}
+
+localStorage.setItem("casata", JSON.stringify(casataLocale));
+ 
+//stampacasata();
+}
+
+
 stampacasata();
     
 //     setInterval(() => {
