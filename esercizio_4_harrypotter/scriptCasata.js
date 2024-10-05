@@ -8,7 +8,15 @@ function aggiungicasata(){
     let varLogo = $("#input-logo").val();  
     let varBacc = $("#input-bacchette").val();  
                            //JQUERY
-
+                           if (varNome ==null || varNome.trim() === "")  
+                            { window.alert("inserire nome") ; return   }  
+                             if (varDesc ==null || varDesc.trim() === "")  
+                             { window.alert("inserire descrizione") ; return   }  
+                            if (varLogo ==null || varLogo.trim() === "")  
+                            { window.alert("inserire url logo") ; return   }  
+                            if (varBacc ==null || varBacc.trim() === "")  
+                            { window.alert("inserire numero bacchette") ; return   }  
+               
     let casata = {
         nome: varNome,
         descriz: varDesc,
@@ -53,6 +61,17 @@ function salvac(){
     let varLogo = document.getElementById("input-logo").value;
     let varBacc = document.getElementById("input-bacchette").value;
 
+
+    if (varNome ==null || varNome.trim() === "")  
+        { window.alert("inserire nome") ; return   }  
+         if (varDesc ==null || varDesc.trim() === "")  
+         { window.alert("inserire descrizione") ; return   }  
+        if (varLogo ==null || varLogo.trim() === "")  
+        { window.alert("inserire url logo") ; return   }  
+        if (varBacc ==null || varBacc.trim() === "")  
+        { window.alert("inserire numero bacchette") ; return   }  
+
+        
     let casataLocale = localStorage.getItem("casata") != null 
                             ? JSON.parse(localStorage.getItem("casata")) : [];
 

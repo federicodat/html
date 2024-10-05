@@ -94,8 +94,15 @@
                 <input type="text" class="form-control" id="input-materiale"/>
             </div>
             <div class="form-group">
-              <label for="input-nucleo">Logo</label>
-              <input type="text" class="form-control" id="input-nucleo"/>
+              <label for="input-nucleo">Nucleo</label>
+              <!-- <input type="text" class="form-control" id="input-nucleo"/> -->
+              <select id="input-nucleo" name="nucleo" class="form-control">  
+                <option value="">-- Seleziona un nucleo --</option>
+                <option value="corda di cuore di Drago">corda di cuore di Drago</option>
+                <option value="crine di Unicorno">crine di Unicorno</option>
+                <option value="piuma di Fenice">piuma di Fenice</option>
+                <option value="pezzotto cinese">pezzotto cinese</option>
+               </select>
           </div>
             <div class="form-group">
                 <label for="input-lun">Lunghezza</label>
@@ -103,7 +110,13 @@
             </div>
             <div class="form-group">
               <label for="input-resistenza">Resistenza</label>
-              <input type="text" class="form-control" id="input-resistenza"/>
+              <!-- <input type="text" class="form-control" id="input-resistenza"/> -->
+              <select id="input-resistenza" name="resistenza" class="form-control">  
+                <option value="">-- Seleziona la sua resistenza --</option>
+                <option value="rigida">rigida</option>
+                <option value="piacevolmente flessibile">piacevolmente flessibile</option>
+                <option value="sufficientemente elastica">sufficientemente elastica</option>
+                <option value="come il sampietrino">rigida</option>
           </div>
           <div class="form-group">
             <label for="input-mago">Mago proprietario</label>
@@ -111,7 +124,12 @@
         </div>
         <div class="form-group">
           <label for="input-casata">Casata</label>
-          <input type="text" class="form-control" id="input-casata"/>
+          <!-- <input type="text" class="form-control" id="input-casata"/> -->
+          <!-- <select id="input-casata" name="casata" class="form-control">   -->
+            <select id="input-casata" name="casata" class="form-control">  
+              <option value="">-- Seleziona la sua casata --</option>
+               
+             </select>      
       </div>
       <div class="form-group">
         <label for="input-foto">Foto</label>
@@ -130,5 +148,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="scriptbacchette.js"></script>
+    <script src="scriptcasatebox.js" ></script>
 </body>
 </html>

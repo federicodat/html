@@ -15,7 +15,22 @@ function aggiungibacchetta(){
 
    
                            //JQUERY
- 
+ if (varCodice ==null || varCodice.trim() === "")  
+ { window.alert("inserire codice") ; return   }  
+  if (varMateriale ==null || varMateriale.trim() === "")  
+  { window.alert("inserire mareriale") ; return   }  
+ if (varNucleo ==null || varNucleo.trim() === "")  
+ { window.alert("inserire nucleo") ; return   }  
+ if (varLunghezza ==null || varLunghezza.trim() === "")  
+ { window.alert("inserire lunghezza") ; return   }  
+ if (varResistenza ==null || varResistenza.trim() === "")  
+ { window.alert("inserire resistenza") ; return   }  
+ if (varMago ==null || varMago.trim() === "")  
+ { window.alert("inserire mago") ; return   }  
+ if (varCasata ==null || varCasata.trim() === "")  
+ { window.alert("inserire casata") ; return   }     
+if (varFoto ==null || varFoto.trim() === "")  
+{ window.alert("inserire url foto") ; return   }                
 
     let bacchetta = {
         codice: varCodice,
@@ -26,8 +41,8 @@ function aggiungibacchetta(){
         mago:varMago,
         casata:varCasata,
         foto:varFoto
-    }
-
+    };
+    
     
     bacchettaLocale.push(bacchetta);
     localStorage.setItem("bacchette", JSON.stringify(bacchettaLocale)) ;
@@ -43,7 +58,7 @@ function aggiungibacchetta(){
     document.getElementById("input-foto").value = "";
 
  
-
+debugger;
     stampabacchetta();
 }  
 
@@ -86,6 +101,23 @@ function salvab(){
     let   varMago = document.getElementById("input-mago").value;
     let   varCasata = document.getElementById("input-casata").value;
     let   varFoto = document.getElementById("input-foto").value;
+
+    if (varCodice ==null || varCodice.trim() === "")  
+        { window.alert("inserire codice") ; return   }  
+         if (varMateriale ==null || varMateriale.trim() === "")  
+         { window.alert("inserire mareriale") ; return   }  
+        if (varNucleo ==null || varNucleo.trim() === "")  
+        { window.alert("inserire nucleo") ; return   }  
+        if (varLunghezza ==null || varLunghezza.trim() === "")  
+        { window.alert("inserire lunghezza") ; return   }  
+        if (varResistenza ==null || varResistenza.trim() === "")  
+        { window.alert("inserire resistenza") ; return   }  
+        if (varMago ==null || varMago.trim() === "")  
+        { window.alert("inserire mago") ; return   }  
+        if (varCasata ==null || varCasata.trim() === "")  
+        { window.alert("inserire casata") ; return   }     
+       if (varFoto ==null || varFoto.trim() === "")  
+       { window.alert("inserire url foto") ; return   }       
 
     let bacchettaLocale = localStorage.getItem("bacchette") != null 
                             ? JSON.parse(localStorage.getItem("bacchette")) : [];
@@ -153,8 +185,29 @@ function eliminab(indice){
     stampabacchetta();
 }
 
+// function controllocampi(){
+//     if (varCodice ==null || varCodice =="")  
+//         { window.alert("inserire codice") ; return   }  
+//      if (varMateriale ==null || varMateriale =="")  
+//          { window.alert("inserire mareriale") ; return   }  
+//      if (varNucleo ==null || varNucleo =="")  
+//          { window.alert("inserire nucleo") ; return   }  
+//      if (varLunghezza ==null || varLunghezza =="0")  
+//          { window.alert("inserire lunghezza") ; return   }  
+//      if (varResistenza ==null || varResistenza =="")  
+//          { window.alert("inserire resistenza") ; return   }  
+//      if (varMago ==null || varMago =="")  
+//          { window.alert("inserire mago") ; return   }  
+//      if (varCasata ==null || varCasata =="")  
+//          { window.alert("inserire casata") ; return   }     
+//      if (varFoto ==null || varFoto =="")  
+//          { window.alert("inserire url foto") ; return   }   
+// }
 
- 
+
+
+
+
 
 
 
