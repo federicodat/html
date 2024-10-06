@@ -117,6 +117,28 @@ function stampacasata(){
 }
 
 function eliminac(indice){
+
+debugger;
+                
+ 
+       //----controllo se ci sono bacchettte    !
+       getItemAtIndex(indice)
+        // imposto casata in  vcasata
+
+    debugger
+                                
+    let bacchettaLocale = localStorage.getItem("bacchette") != null 
+    ? JSON.parse(localStorage.getItem("bacchette")) : [];
+
+
+    for(let [idx, item] of bacchettaLocale.entries()){
+        if(item.casata == vcasata){
+            { window.alert("NUN CE PROVA MAGO! cancellare prima bacchette associate") ; return   }  }}
+            
+            
+             
+             
+    //----fine controllo se ci sono bacchettte    !
     let casataLocale = localStorage.getItem("casata") != null 
                             ? JSON.parse(localStorage.getItem("casata")) : [];
 
@@ -124,6 +146,8 @@ function eliminac(indice){
 
     localStorage.setItem("casata", JSON.stringify(casataLocale));
     stampacasata();
+
+     
 }
 
 
@@ -181,7 +205,22 @@ localStorage.setItem("casata", JSON.stringify(casataLocale));
 //stampacasata();
 }
 
-
+function getItemAtIndex(indice) {
+     debugger
+    let casataLocale = localStorage.getItem("casata") !== null 
+                                ? JSON.parse(localStorage.getItem("casata")) 
+                                : [];
+    
+    
+        
+    for(let [idx, item] of casataLocale.entries()){
+        if(indice == idx){
+             vcasata =item.nome 
+            return;
+          
+}
+}
+}
 stampacasata();
     
 //     setInterval(() => {
