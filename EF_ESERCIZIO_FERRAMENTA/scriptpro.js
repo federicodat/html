@@ -226,6 +226,30 @@ document.getElementById("ins-qua").value = "";
 }
 
 
+function listareparti(){
+    debugger
+    $.ajax(
+        {
+            url: "http://localhost:5140/api/Reparti/lista",
+            type: "GET",
+            success: function(risultato){
+debugger
+                 let contenuto = "";
+                 risultato.forEach(element => {
+                    contenuto += `<option value="${element.cod}">${element.nom}</option>`;
+                });
 
+                $("#ins-reparto").html(contenuto)
+                            
+                            
+            },
+            error: function(errore){
+                alert("Sono in errore");
+                console.log(errore)
+            }
+        })
+    }
 
 stampaTabella();
+listareparti();
+    
