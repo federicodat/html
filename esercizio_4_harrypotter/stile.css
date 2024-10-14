@@ -11,6 +11,17 @@
      
 } */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: url(hogwarts.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #52462a;
+    font-family: "Raleway", sans-serif;
+}
 img {
     display: block;
     margin: auto;
