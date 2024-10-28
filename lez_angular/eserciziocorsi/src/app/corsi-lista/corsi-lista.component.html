@@ -1,0 +1,29 @@
+<!-- <div class="alert alert-success mt-3" role="alert" *ngIf="successo">
+    Operazione effettuata con successo xD
+</div> -->
+<h1>    L I S T A    C O R S I    </h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>Max partecipanti</th>
+            <!-- <th>Azioni</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Corsi of elencocorsi">
+            <td>{{  Corsi.cod }}</td>
+            <td>{{  Corsi.nom }}</td>
+            <td>{{  Corsi.des }}</td>
+            <td>{{  Corsi.pre }}</td>
+            <td>{{  Corsi.max }}</td>
+            <td>
+                <!-- <a href="/Corsi/iscrizione/{{ Corsi.cod }}" class="btn btn-warning">Iscriviti</a> -->
+                <a href="/Corsi/iscrizioni" class="btn btn-warning">Iscriviti</a>
+            </td> 
+        </tr>
+    </tbody>
+</table>

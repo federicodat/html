@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>num max partecipanti</th>
+            <th>data inizio corso</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of elenco">
+            <td>{{ c.nom }}</td>
+            <td>{{ c.des }}</td>
+            <td>{{ c.pre }}&euro;</td>
+            <td>{{ c.par }} </td>
+            <td>{{ c.dat | date: 'dd/MM/yyyy' }}</td>
+             
+            <td>
+                <a href="/iscrizione/{{ c.cod }}" class="btn btn-primary">Iscriviti</a>
+                 
+            </td>
+            <td>
+              
+                <a href="/disiscrizione/{{ c.cod }}" class="btn btn-danger">cancellati</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+ 

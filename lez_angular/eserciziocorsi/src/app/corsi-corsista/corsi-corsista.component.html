@@ -1,0 +1,29 @@
+<h1>ISCRIZIONE CORSO</h1>
+<p>inserisci i dati</p>
+
+<div class="form-group">
+    <label for="input-nome" class="form-label">Nome</label>
+    <input type="text" id="input-nome" class="form-control" [(ngModel)]="nome" />
+</div>
+
+<div class="form-group">
+    <label for="input-cognome" class="form-label">Cognome</label>
+    <input type="text" id="input-cognome" class="form-control" [(ngModel)]="cognome" />
+</div>
+
+<div class="form-group">
+    <label for="input-mail" class="form-label">Email</label>
+    <input type="text" id="input-mail" class="form-control" [(ngModel)]="mail" />
+</div>
+
+ 
+
+<button type="button" class="btn btn-primary mt-3" (click)="salva()" *ngIf="!successo">Salva</button>
+
+<div class="alert alert-danger mt-3" role="alert" *ngIf="errore">
+    Errore di compilazione del form
+</div>
+
+<!-- <div class="alert alert-success mt-3" role="alert" *ngIf="successo">
+    Inserimento effettuato con successo, attesa del redirect...
+</div> -->

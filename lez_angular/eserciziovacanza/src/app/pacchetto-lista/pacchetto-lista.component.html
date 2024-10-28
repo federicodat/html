@@ -1,0 +1,30 @@
+<!-- <div class="alert alert-success mt-3" role="alert" *ngIf="successo">
+    Operazione effettuata con successo xD
+</div> -->
+<h1>LISTA PACCHETTI VACANZE</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Durata</th>
+            <th>Data inizio</th>
+            <th>Data fine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Pacchetto of elencopac">
+            <td>{{ Pacchetto.nom }}</td>
+            <td>{{ Pacchetto.prez }}</td>
+            <td>{{ Pacchetto.dura }}</td>
+            <td>{{ Pacchetto.datai}}</td>
+            <td>{{ Pacchetto.dataf}}</td>
+            <td>
+                <button type="button" class="btn btn-info"  >Dettaglio</button> 'o facimm riman'
+                <!-- <button type="button" class="btn btn-info" (click)="dettaglio(Destinazioni.nom)">Dettaglio</button> -->
+                <!-- <a href="/prodotti/modifica/{{ prod.cod }}" class="btn btn-warning">M</a> --> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+

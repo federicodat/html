@@ -1,0 +1,30 @@
+<!-- <div class="alert alert-success mt-3" role="alert" *ngIf="successo">
+    Operazione effettuata con successo xD -->
+</div>
+ 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>Quantità</th>
+            <th>Prezzo</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of elencoprodotti">
+            <td>{{ prod.cod }}</td>
+            <td>{{ prod.nom }}</td>
+            <td>{{ prod.des }}</td>
+            <td>{{ prod.pre }}</td>
+            <td>{{ prod.qua }}</td>
+            <td>
+                <!-- <button type="button" class="btn btn-danger" (click)="elimina(prod.cod)">X</button>
+               // <a href="/prodotti/modifica/{{ prod.cod }}" class="btn btn-warning">M</a> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
