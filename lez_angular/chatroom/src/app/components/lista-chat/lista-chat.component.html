@@ -1,0 +1,26 @@
+ <h1> *******             chat room 17          *****</h1>
+ <table class="table">
+    <thead>
+        <tr>
+            
+            <th>messaggio</th> 
+            <th>Utente</th> 
+            <th>data </th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of elenco">
+            
+            <td>{{ c.mess}}</td> 
+            <td>{{ c.ute}}</td>     
+            <td>{{ c.datm}}</td>          
+        </tr>
+        <div class="form-group" top mt-5>
+            <h2> </h2>
+            <label for="input-des" class="bold-label">Chatta message</label>
+            <input type="text" class="form-control" id="input-des" placeholder="Chatta pure te se nun hai da fa altro!" />
+        
+            <button type="button" class="btn btn-info" onclick="Salvamess()">Invia</button>
+        </div>
+    </tbody>
+</table>
